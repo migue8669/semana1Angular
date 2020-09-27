@@ -1,104 +1,90 @@
 <section class="contenedor">
+  <div class="card" style="width: 25rem">
+    <div class="card-body">
+      <ul *ngFor="let item of list; let i = index">
+        <td>{{ dataDepor.data[item].teams }}</td>
 
-<div class="card" style="width: 25rem">
-  <div class="card-body">
-    <ul *ngFor="let item of list; let i=index">
-      <td>{{ dataDepor.data[item].teams }}</td>
-
-      <form
-        [formGroup]="formTemplate"
-        (ngSubmit)="onSubmit(formTemplate.value,item)"
-      >
-
-   
-
-        <div class="form-group">
-          <input
-            [id]="item"
-            type="hidden"
-            class="form-control"
-            formControlName="$key"
-            [(ngModel)]="service.selectedDato.$key"
-          />
-        </div>
-        <td>Resultado</td>
-<!-- 
-        <div class="form-group">
-          <input
-          [id]="item"
-
-          type="hidden"
-          class="form-control"
-          formControlName="team"
-          [(ngModel)]="service.selectedDato.team"
-          
-            >{{ dataDepor.data[item].teams }}
-
-         </div> -->
-        <!-- <div class="form-group">
-          <input
-            [id]="item"
-            class="form-control"
-            formControlName="resultado"
-            [(ngModel)]="service.selectedDato.resultado"
-            placeholder="Resultado"
-          /> 
-        </div> -->
-        <select name="resultado1"       class="form-control"
-        formControlName="resultado1"    [(ngModel)]="service.selectedDato.resultado1">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-
-        </select>
-        <select name="resultado2"        class="form-control"
-        formControlName="resultado2"    [(ngModel)]="service.selectedDato.resultado2">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-
-        </select>
-
-
-
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <button type="submit" class="btn btn-success btn-block float-right">
-              Ingresar
-            </button>
+        <form
+          [formGroup]="formTemplate"
+          (ngSubmit)="onSubmit(formTemplate.value, item)"
+        >
+          <div class="form-group">
+            <input
+              [id]="item"
+              type="hidden"
+              class="form-control"
+              formControlName="$key"
+              [(ngModel)]="service.selectedDato.$key"
+            />
           </div>
-        </div>
+          <td>Resultado</td>
 
-      </form>      </ul>
+          <select
+            name="resultado1"
+            class="form-control"
+            formControlName="resultado1"
+            [(ngModel)]="service.selectedDato.resultado1"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <select
+            name="resultado2"
+            class="form-control"
+            formControlName="resultado2"
+            [(ngModel)]="service.selectedDato.resultado2"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
 
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <button
+                type="submit"
+                class="btn btn-success btn-block float-right"
+              >
+                Ingresar
+              </button>
+            </div>
+          </div>
+        </form>
+      </ul>
     </div>
   </div>
   <div class="card" style="width: 25rem">
     <div class="card-body">
-    
-    <ul class="ul" *ngFor="let  index of listaFirebase">
-{{index.resultado1}} -
-{{index.resultado2}}
+      <ul class="ul" *ngFor="let index of listaFirebase">
+        {{
+          index.resultado1
+        }}
+        -
+        {{
+          index.resultado2
+        }}
 
-{{index.team |json}}
-
-    </ul>
+        {{
+          index.team | json
+        }}
+      </ul>
+    </div>
   </div>
-</div>
 </section>
 <!-- <div class="form-group col-md-6">
           <a

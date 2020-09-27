@@ -66,7 +66,6 @@ export class AppComponent implements OnInit {
     console.log(formValue,i)
     
     console.log(this.dataDepor.data[i].teams)
-    // this.service.ins
     if (formValue.$key == null) {
       this.service.insert(formValue,this.dataDepor.data[i].teams);
     } else {
@@ -74,7 +73,6 @@ export class AppComponent implements OnInit {
     }
 
     this.resetForm();
-    // this.resetForm();
   }
 
   get formControls() {

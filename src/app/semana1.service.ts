@@ -30,21 +30,21 @@ export class Semana1Service {
     return this.dato;
   }
 
-  update(imageDetails: FireModel,i:any) {
+  update(form: FireModel,i:any) {
     this.dato = this.firebase.list('/node-c1ffb');
-    console.log(imageDetails);
-    this.dato.update(imageDetails.$key, {
+    console.log(form);
+    this.dato.update(form.$key, {
       team: i,
-      resultado1: imageDetails.resultado1,
-      resultado2: imageDetails.resultado2,
+      resultado1: form.resultado1,
+      resultado2: form.resultado2,
 
     });
   }
-  insert(imageDetails: FireModel, i:any) {
+  insert(form: FireModel, i:any) {
     this.dato = this.firebase.list('/node-c1ffb');
     this.dato.push({
-      resultado1: imageDetails.resultado1,
-      resultado2: imageDetails.resultado2,
+      resultado1: form.resultado1,
+      resultado2: form.resultado2,
 
       team: i,
 

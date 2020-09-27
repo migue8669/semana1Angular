@@ -1,5 +1,7 @@
 # Semana1
 
+Si tienes problemas para correr el proyecto por cuestión de firebase, por favor ejecuta los siguientes comandos en la terminal del proyecto: "npm install firebase" y luego "ng add @angular/fire"
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
 ## Development server

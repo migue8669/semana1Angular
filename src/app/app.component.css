@@ -1,0 +1,7 @@
+.contenedor {
+    display: flex;
+}
+
+.ul{
+    line-height: 2.5em; 
+}

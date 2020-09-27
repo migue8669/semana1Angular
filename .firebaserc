@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "node-c1ffb": {
+      "hosting": {
+        "semana1": [
+          "node-c1ffb"
+        ]
+      }
+    }
+  }
+}

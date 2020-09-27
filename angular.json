@@ -117,8 +117,16 @@
               "devServerTarget": "semana1:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "semana1"
+    }
+  },
+  "defaultProject": "semana1",
+  "cli": {
+    "analytics": "4605bd9b-935e-41e7-bb07-8af1330d6087"
+  }
 }

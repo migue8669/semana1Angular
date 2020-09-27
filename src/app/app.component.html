@@ -2,13 +2,18 @@
   <div class="card" style="width: 25rem">
     <div border class="card-body">
       <ul *ngFor="let item of list; let i = index">
+        <p>
+          <tr>
+            Ingresa tu pronostico
+          </tr>
+        </p>
         <td>{{ dataDepor.data[item].teams }}</td>
 
         <form
           [formGroup]="formTemplate"
           (ngSubmit)="onSubmit(formTemplate.value, item)"
         >
-          <div border bStyle='dotted' class="form-group">
+          <div class="form-group">
             <input
               [id]="item"
               type="hidden"
@@ -17,7 +22,7 @@
               [(ngModel)]="service.selectedDato.$key"
             />
           </div>
-          <td>Resultado</td>
+          <td border bStyle="dotted">Resultado</td>
 
           <select
             name="resultado1"
@@ -25,6 +30,7 @@
             formControlName="resultado1"
             [(ngModel)]="service.selectedDato.resultado1"
           >
+            <option value="1">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -42,6 +48,7 @@
             formControlName="resultado2"
             [(ngModel)]="service.selectedDato.resultado2"
           >
+            <option value="1">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

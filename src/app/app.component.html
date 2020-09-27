@@ -1,6 +1,6 @@
 <section class="contenedor">
   <div class="card" style="width: 25rem">
-    <div class="card-body">
+    <div border class="card-body">
       <ul *ngFor="let item of list; let i = index">
         <td>{{ dataDepor.data[item].teams }}</td>
 
@@ -8,7 +8,7 @@
           [formGroup]="formTemplate"
           (ngSubmit)="onSubmit(formTemplate.value, item)"
         >
-          <div class="form-group">
+          <div border bStyle='dotted' class="form-group">
             <input
               [id]="item"
               type="hidden"
